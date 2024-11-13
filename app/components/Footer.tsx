@@ -1,20 +1,23 @@
-// app/components/Footer.tsx
 export default function Footer() {
   return (
-    <footer className="p-6 bg-gray-900 text-white text-center">
-      <p className="font-bold text-xl">Elevating Your Export Experience</p>
-      <div className="mt-4 flex justify-center space-x-8">
-        <a href="#product" className="hover:underline">
-          Our Product
-        </a>
-        <a href="#about" className="hover:underline">
-          About Us
-        </a>
-        <a href="#contact" className="hover:underline">
-          Contact
-        </a>
+    <footer className="h-[200px] bg-black text-white flex justify-between items-center w-full mx-auto" style={{ paddingLeft: '150px', paddingRight: '150px' }}>
+      <div className="text-left">
+        <p className="font-bold text-4xl">Elevating<br />Your Export<br />Experience</p>
       </div>
-      <p className="mt-4 text-sm">© 2024 • Experience</p>
+      <div className="text-right">
+        <nav className="space-y-2 text-lg">
+          <a href="#product" className="hover:underline block">
+            Our Product
+          </a>
+          <a href="#about" className="hover:underline block">
+            About Us
+          </a>
+          <a href="#contact" className="hover:underline block">
+            Contact
+          </a>
+        </nav>
+        <p className="mt-6 text-sm mb-6">© 2024 • Experience</p>
+      </div>
     </footer>
   );
 }

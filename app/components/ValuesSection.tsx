@@ -1,20 +1,22 @@
 // app/components/ValuesSection.tsx
 export default function ValuesSection() {
   return (
-    <section className="p-8 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center">Our Values</h2>
-      <div className="flex justify-around mt-6">
+    <section className="px-[150px] py-12 bg-white">
+      <hr className="border-t border-gray-900 mb-6" />
+      <h2 className="text-4xl font-semibold text-center mb-8 tracking-wide font-[League Spartan] text-black">Our Values</h2>
+      <div className="grid grid-cols-4 gap-8">
         {[
-          "Quality",
-          "Long-term Relationship",
-          "Safe Packaging",
-          "Secure Payment",
-        ].map((value) => (
+          { label: "Quality" },
+          { label: "Long-term Relationship" },
+          { label: "Safe Packaging" },
+          { label: "Secure Payment" },
+        ].map((item, index) => (
           <div
-            key={value}
-            className="w-1/5 bg-gray-200 p-4 rounded-lg text-center"
+            key={index}
+            className="flex flex-col items-center p-8 rounded-lg"
           >
-            <p className="font-bold">{value}</p>
+            <div className="w-[280px] h-[320px] bg-gray-300 rounded-lg mb-4"></div>
+            <p className="text-lg font-medium tracking-tight font-[League Spartan] text-black">{item.label}</p>
           </div>
         ))}
       </div>
