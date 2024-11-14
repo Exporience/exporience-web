@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 export default function WhatsAppButton() {
   const phoneNumber = "6281212239833";
-  const message = "Ahok kafir";
+  const message = "Hallo";
   return (
     <a
       href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
