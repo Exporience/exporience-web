@@ -1,22 +1,34 @@
-// app/components/ValuesSection.tsx
-export default function ValuesSection() {
+export function OurValues() {
+  const values = [
+    { label: "Quality", width: "64px", height: "17px" },
+    { label: "Long-term Relationship", width: "209px", height: "35px" },
+    { label: "Safe Packaging", width: "133px", height: "17px" },
+    { label: "Secure Payment", width: "137px", height: "17px" },
+  ];
+
   return (
-    <section className="px-[150px] py-12 bg-white">
-      <hr className="border-t border-gray-900 mb-6" />
-      <h2 className="text-4xl font-semibold text-center mb-8 tracking-wide font-[League Spartan] text-black">Our Values</h2>
-      <div className="grid grid-cols-4 gap-8">
-        {[
-          { label: "Quality" },
-          { label: "Long-term Relationship" },
-          { label: "Safe Packaging" },
-          { label: "Secure Payment" },
-        ].map((item, index) => (
+    <section className="flex flex-col items-center px-[36px] pt-[68px] w-full h-auto relative z-[3]">
+      <hr className="w-full border-t border-black" />
+      <h2 className="w-[190px] font-[League Spartan] text-[40px] font-semibold text-black text-justify leading-[37px] my-[70px]">
+        Our Values
+      </h2>
+      <div className="flex flex-row items-center justify-between w-[1280px] h-auto">
+        {values.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-8 rounded-lg"
+            className="flex flex-col items-center gap-[10px] w-[271px]"
           >
-            <div className="w-[280px] h-[320px] bg-gray-300 rounded-lg mb-4"></div>
-            <p className="text-lg font-medium tracking-tight font-[League Spartan] text-black">{item.label}</p>
+            <div className="w-[271px] h-[170px] bg-[#D9D9D9] rounded-[30px]"></div>
+            <p
+              className="font-[League Spartan] text-[20px] font-medium text-black text-justify"
+              style={{
+                width: item.width,
+                height: item.height,
+                lineHeight: "18px",
+              }}
+            >
+              {item.label}
+            </p>
           </div>
         ))}
       </div>

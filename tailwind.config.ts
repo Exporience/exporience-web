@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      boxShadow: {
+        'header': '0 4px 80px -23px rgba(0, 0, 0, 0.35)', // Custom shadow for header
+      },
     },
   },
   plugins: [],
