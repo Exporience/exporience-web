@@ -11,7 +11,7 @@ export function HeroAndAboutUs() {
     <section id="product" className="bg-transparent relative px-[36px]">
       <div>
         <Image
-          src="/images/Hero.png"
+          src="/images/hero.png"
           alt="exporience"
           width={0}
           height={650}
