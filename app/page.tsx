@@ -1,9 +1,10 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
-import { HeroAndAboutUs } from "./components/HeroAndAboutUsSection";
+import HeroAndAboutUs  from "./components/HeroAndAboutUsSection";
 import { OurValues } from "./components/ValuesSection";
 import { OurMissionAndVision } from "./components/MissionSection";
+import ProductSection from "./components/ProductSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <HeroAndAboutUs />
         <OurValues />
         <OurMissionAndVision />
+        <ProductSection />
       </main>
       <WhatsAppButton />
       <Footer />
