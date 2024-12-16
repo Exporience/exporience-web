@@ -13,7 +13,7 @@ export function OurMissionAndVision() {
         </blockquote>
         <div className="w-full h-[209px] bg-[#F1EFE7] flex items-center justify-center px-[14px]">
           <ul className="text-gray-800 text-sm flex space-x-6 justify-center text-left list-disc pl-6">
-            <h3 className="text-[32px] font-bold mt-0 text-gray-900 font-league-spartan">
+            <h3 className="text-[32px] xl:text-[40px] font-bold mt-0 text-gray-900 font-league-spartan">
               Our <br /> <br /> <span className="text-[#182989]"> Missions </span>
             </h3>
             <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-[60px] px-6">

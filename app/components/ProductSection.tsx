@@ -11,7 +11,7 @@ const fruits = {
       "With its unique sweet and tangy flavor and soft texture, our mangosteen is the perfect choice for a healthy and eco-friendly lifestyle.",
     ],
     specifications: [
-        { title: "Grades", value: "5A, 6A (Mixed can by request"},
+        { title: "Grades", value: "5A, 6A (Mixed & can by request)"},
       { title: "Weight per Fruits", value: "100 - 150 grams" },
       { title: "Color", value: "Dark red & Purple" },
       { title: "Taste", value: "Sweet & Sour" },
@@ -68,7 +68,7 @@ export default function ProductSection() {
   return (
     <section className="font-['League_Spartan'] p-8 max-w-4xl mx-auto">
       {/* Title */}
-      <h2 className="text-4xl font-semibold text-center text-black pb-[54px]">
+      <h2 className="text-4xl xl:text-[64px] xl:pt-[50px] xl:pb-[100px] font-semibold text-center text-black pb-[54px]">
         Our <span className="text-[#182989]">Products</span>
       </h2>
 
