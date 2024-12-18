@@ -12,7 +12,7 @@ export default function HeroAndAboutSection() {
           width={440}
           height={200}
           priority
-          className="block md:hidden w-full"
+          className="block md:hidden w-full rounded-[40px] pt-4 px-2"
         />
         <Image
           src="/images/hero.png"

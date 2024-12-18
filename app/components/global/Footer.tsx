@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="h-[200px] bg-black text-white flex justify-between items-center w-full mx-auto" style={{ paddingLeft: '150px', paddingRight: '150px' }}>
-      <div className="text-left">
+    <footer className="py-5 bg-black text-white grid md:grid-cols-6 max-md:grid-rows-2 items-center w-full mx-auto">
+      <div className="md:text-left text-center md:col-start-2 md:col-span-2">
         <p className="font-bold text-4xl">Elevating<br />Your Export<br />Experience</p>
       </div>
-      <div className="text-right">
+      <div className="md:text-right text-center md:col-start-4 md:col-span-2">
         <nav className="space-y-2 text-lg">
           <a href="#product" className="hover:underline block">
             Our Product

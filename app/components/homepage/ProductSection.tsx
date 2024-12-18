@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 const fruits = {
   mangosteen: {
@@ -11,7 +12,7 @@ const fruits = {
       "With its unique sweet and tangy flavor and soft texture, our mangosteen is the perfect choice for a healthy and eco-friendly lifestyle.",
     ],
     specifications: [
-        { title: "Grades", value: "5A, 6A (Mixed & can by request)"},
+      { title: "Grades", value: "5A, 6A (Mixed & can by request)" },
       { title: "Weight per Fruits", value: "100 - 150 grams" },
       { title: "Color", value: "Dark red & Purple" },
       { title: "Taste", value: "Sweet & Sour" },
@@ -35,7 +36,10 @@ const fruits = {
       { title: "Ripeness (for shipping)", value: "60 - 70%" },
       { title: "Packaging", value: "18 pieces (Net weight: 10-14 kg/box)" },
       { title: "Packaging Type", value: "Export Carton (CT) Box" },
-      { title: "Treatment", value: "Strict Sorting and Phytosanitary Certification" },
+      {
+        title: "Treatment",
+        value: "Strict Sorting and Phytosanitary Certification",
+      },
     ],
   },
   salak: {
@@ -46,11 +50,11 @@ const fruits = {
       "Its unique, crunchy texture adds to its appeal, making it a versatile fruit that can be enjoyed on its own or incorporated into various dishes. This combination of health benefits and distinctive taste makes snake fruit an excellent choice for consumers seeking both nutrition and flavor.",
     ],
     specifications: [
-        { title: "Color", value: "Brown-skin" },
-        { title: "Taste", value: "Sweet and Crunchy" },
-        { title: "Ripeness (for shipping)", value: "60-75%" },
-        { title: "Shelf life", value: "4 week (put to refrigerator)" },
-        { title: "Weight per Packaging", value: "10 Kg" },
+      { title: "Color", value: "Brown-skin" },
+      { title: "Taste", value: "Sweet and Crunchy" },
+      { title: "Ripeness (for shipping)", value: "60-75%" },
+      { title: "Shelf life", value: "4 week (put to refrigerator)" },
+      { title: "Weight per Packaging", value: "10 Kg" },
       { title: "Packaging Type", value: "Plastic Crate" },
       { title: "Treatment", value: "Intensive Sorting" },
     ],
@@ -58,9 +62,8 @@ const fruits = {
 };
 
 export default function ProductSection() {
-  const [selectedFruit, setSelectedFruit] = useState<keyof typeof fruits>(
-    "dragonfruit"
-  );
+  const [selectedFruit, setSelectedFruit] =
+    useState<keyof typeof fruits>("dragonfruit");
   const [activeTab, setActiveTab] = useState("description");
 
   const fruit = fruits[selectedFruit];
@@ -87,31 +90,35 @@ export default function ProductSection() {
 
         {/* Fruit Details */}
         <div className="flex-1">
-          <h3 className="text-4xl font-semibold text-black mb-4">{fruit.name}</h3>
+          <h3 className="text-4xl font-semibold text-black mb-4">
+            {fruit.name}
+          </h3>
 
           {/* Tabs */}
           <div className="flex border-b mb-4">
-  <button
-    className={`py-2 px-4 text-black font-['League_Spartan'] ${
-      activeTab === "description"
-        ? "border-b-2 border-[#182989] font-bold"
-        : ""
-    }`}
-    onClick={() => setActiveTab("description")}
-  >
-    Descriptions
-  </button>
-  <button
-    className={`py-2 px-4 text-black font-['League_Spartan'] ${
-      activeTab === "specifications"
-        ? "border-b-2 border-[#182989] font-bold"
-        : ""
-    }`}
-    onClick={() => setActiveTab("specifications")}
-  >
-    Specifications
-  </button>
-</div>
+            <button
+              className={clsx(
+                `py-2 px-4 text-black font-['League_Spartan']`,
+                activeTab === "description"
+                  ? "border-b-2 border-[#182989] font-bold"
+                  : ""
+              )}
+              onClick={() => setActiveTab("description")}
+            >
+              Descriptions
+            </button>
+            <button
+              className={clsx(
+                `py-2 px-4 text-black font-['League_Spartan']`,
+                activeTab === "specifications"
+                  ? "border-b-2 border-[#182989] font-bold"
+                  : ""
+              )}
+              onClick={() => setActiveTab("specifications")}
+            >
+              Specifications
+            </button>
+          </div>
 
           {/* Tab Content */}
           {activeTab === "description" ? (
@@ -134,7 +141,7 @@ export default function ProductSection() {
       </div>
 
       {/* Fruit Options */}
-      <div className="flex justify-center gap-[154px] mt-[54px]">
+      <div className="flex md:justify-center gap-20 md:gap-[154px] mt-7 pt-7 overflow-auto">
         {Object.entries(fruits).map(([key, value]) => (
           <button
             key={key}
@@ -145,9 +152,7 @@ export default function ProductSection() {
             }`}
             onClick={() => setSelectedFruit(key as keyof typeof fruits)}
           >
-            <div
-              className="w-[150px] h-[150px] rounded-full bg-gray-100 flex items-center justify-center shadow-md transition-transform duration-300 hover:scale-110"
-            >
+            <div className="w-[150px] h-[150px] rounded-full bg-gray-100 flex items-center justify-center shadow-md transition-transform duration-300 hover:scale-110">
               <Image
                 src={value.image}
                 alt={value.name}

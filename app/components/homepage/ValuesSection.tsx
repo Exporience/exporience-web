@@ -7,7 +7,7 @@ export function OurValues() {
   ];
 
   return (
-    <section className="flex flex-col items-center px-4 pt-8 w-full h-auto relative z-[3] xl:px-[36px] xl:pt-[68px]">
+    <section className="flex flex-col items-center px-4 pt-8 w-full h-auto relative xl:px-[36px] xl:pt-[68px]">
       <hr className="w-full border-t border-black" />
       <h2 className="font-['League_Spartan'] text-[28px] font-semibold text-black text-center leading-[32px] my-8 xl:w-full xl:text-[64px] xl:leading-[50px] xl:my-[70px]">
         Our <span className="text-[#182989]"> Values </span>

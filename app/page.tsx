@@ -1,10 +1,10 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
-import HeroAndAboutUs  from "./components/HeroAndAboutUsSection";
-import { OurValues } from "./components/ValuesSection";
-import { OurMissionAndVision } from "./components/MissionSection";
-import ProductSection from "./components/ProductSection";
+import Header from "./components/global/Header";
+import Footer from "./components/global/Footer";
+import WhatsAppButton from "./components/global/WhatsAppButton";
+import HeroAndAboutUs  from "./components/homepage/HeroAndAboutUsSection";
+import { OurValues } from "./components/homepage/ValuesSection";
+import { OurMissionAndVision } from "./components/homepage/MissionSection";
+import ProductSection from "./components/homepage/ProductSection";
 
 export default function Home() {
   return (
