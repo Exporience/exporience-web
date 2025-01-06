@@ -3,7 +3,7 @@ export function OurValues() {
     { label: "Quality", image: "/images/values-quality.png" },
     { label: "Long-term Relationship", image: "/images/values-relationship.png" },
     { label: "Safe Packaging", image: "/images/values-packaging.png" },
-    { label: "Secure Payment", image: "/images/values-quality.png" },
+    { label: "Secure Payment", image: "/images/values-transaction.png" },
   ];
 
   return (
