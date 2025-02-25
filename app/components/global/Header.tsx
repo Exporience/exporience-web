@@ -6,6 +6,18 @@ import Image from "next/image";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Function untuk smooth scrolling ke section tertentu
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const yOffset = -80; // Agar tidak tertutup navbar yang fixed
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+
+      setIsMenuOpen(false); // Tutup menu di mobile setelah klik
+    }
+  };
+
   return (
     <header className="bg-[#F1EFE7] shadow-header fixed w-full z-50 font-league-spartan font-medium">
       <div className="flex justify-between items-center px-4 py-4 mx-auto w-full max-w-none xl:px-[36px]">
@@ -52,32 +64,30 @@ export default function Header() {
           } xl:block absolute xl:relative top-16 left-0 xl:top-0 xl:left-0 bg-[#F1EFE7] w-full xl:w-auto xl:gap-8 xl:gap-[37px]`}
         >
           <Link
-            href="#home"
+            href="/"
             className="block xl:inline hover:text-[#182989] text-[16px] px-4 py-2 xl:p-0 xl:text-[20px] xl:text-[22px]"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
-          <Link
-            href="#catalog"
-            className="block xl:inline hover:text-[#182989] text-[16px] px-4 py-2 xl:p-0 xl:text-[20px] xl:text-[22px]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Catalog
-          </Link>
-          <Link
-            href="#service"
-            className="block xl:inline hover:text-[#182989] text-[16px] px-4 py-2 xl:p-0 xl:text-[20px] xl:text-[22px]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Service
-          </Link>
-          <Link
-            href="#about"
-            className="block xl:inline hover:text-[#182989] text-[16px] px-4 py-2 xl:p-0 xl:text-[20px] xl:text-[22px]"
-            onClick={() => setIsMenuOpen(false)}
+          <button
+            className="block xl:inline hover:text-[#182989] text-[16px] px-4 py-2 xl:p-0 xl:text-[20px] xl:text-[22px] bg-transparent border-none cursor-pointer"
+            onClick={() => scrollToSection("about-us")}
           >
             About Us
+          </button>
+          <button
+            className="block xl:inline hover:text-[#182989] text-[16px] px-4 py-2 xl:p-0 xl:text-[20px] xl:text-[22px] bg-transparent border-none cursor-pointer"
+            onClick={() => scrollToSection("categories-section")}
+          >
+            Catalog
+          </button>
+          <Link
+            href="/services"
+            className="block xl:inline hover:text-[#182989] text-[16px] px-4 py-2 xl:p-0 xl:text-[20px] xl:text-[22px]"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Services
           </Link>
         </nav>
       </div>

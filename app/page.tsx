@@ -1,10 +1,11 @@
 import Header from "./components/global/Header";
 import Footer from "./components/global/Footer";
 import WhatsAppButton from "./components/global/WhatsAppButton";
-import HeroAndAboutUs  from "./components/homepage/HeroAndAboutUsSection";
-import { OurValues } from "./components/homepage/ValuesSection";
-import { OurMissionAndVision } from "./components/homepage/MissionSection";
-import ProductSection from "./components/homepage/ProductSection";
+import HeroAndAboutUs  from "./components/HomePage/HeroAndAboutUsSection";
+import { OurValues } from "./components/HomePage/ValuesSection";
+import { OurMissionAndVision } from "./components/HomePage/MissionSection";
+import CategoriesSection from "./components/HomePage/CategoriesSection";
+// import ProductSection from "./components/homepage/ProductSection";
 
 export default function Home() {
   return (
@@ -24,7 +25,8 @@ export default function Home() {
         <HeroAndAboutUs />
         <OurValues />
         <OurMissionAndVision />
-        <ProductSection />
+        {/* <ProductSection /> */}
+        <CategoriesSection/>
       </main>
       <WhatsAppButton />
       <Footer />

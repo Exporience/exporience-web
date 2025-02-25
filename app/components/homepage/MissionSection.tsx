@@ -11,7 +11,7 @@ export function OurMissionAndVision() {
           <br />
           reaching every country and fostering <br /> sustainable growth.”
         </blockquote>
-        <div className="w-full py-10 bg-[#F1EFE7] flex items-center justify-center px-[14px]">
+        <div className="w-full py-10 bg-[#F1EFE7] flex items-center justify-center px-[14px] xl:h-[250px]">
           <ul className="text-gray-800 text-sm flex max-md:flex-col space-x-6 justify-center text-left list-disc md:pl-6 max-md:px-5">
             <h3 className="text-[32px] xl:text-[40px] font-bold mt-0 text-gray-900 font-league-spartan max-md:mb-5">
               Our <br /> <br /> <span className="text-[#182989]"> Missions </span>
