@@ -25,7 +25,7 @@ export default function CategoriesSection() {
         {/* Fresh Fruits */}
         <div className="relative bg-white shadow-lg rounded-2xl overflow-hidden transition-all transform hover:scale-105 hover:bg-[#182989] hover:text-white cursor-pointer group">
           <Image
-            src="/images/1.png"
+            src="/images/1.jpg"
             alt="Fresh Fruits"
             width={500}
             height={500}
@@ -50,7 +50,7 @@ export default function CategoriesSection() {
         {/* Coffee Beans */}
         <div className="relative bg-white shadow-lg rounded-2xl overflow-hidden transition-all transform hover:scale-105 hover:bg-[#182989] hover:text-white cursor-pointer group">
           <Image
-            src="/images/11.png"
+            src="/images/11.jpg"
             alt="Coffee Beans"
             width={500}
             height={300}
@@ -75,7 +75,7 @@ export default function CategoriesSection() {
         {/* Spices */}
         <div className="relative bg-white shadow-lg rounded-2xl overflow-hidden transition-all transform hover:scale-105 hover:bg-[#182989] hover:text-white cursor-pointer group">
           <Image
-            src="/images/111.png"
+            src="/images/111.jpg"
             alt="Spices"
             width={500}
             height={300}
